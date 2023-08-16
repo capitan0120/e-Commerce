@@ -4,7 +4,7 @@ from .forms import LoginForm, MyPasswordResetForm, MyPasswordChangeForm
 from .views import *
 
 urlpatterns = [
-    path('', home),
+    path('', home, name='home'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
     path('category/<slug:val>', CategoryView.as_view(), name='category'),
